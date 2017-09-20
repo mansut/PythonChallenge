@@ -1,6 +1,6 @@
 import urllib.request as ur
 
-def ReadWebPageContent(urlToRead) -> str:
+def ReadWebPageContent(urlToRead) -> bytes :
     """
     Legge il contenuto di una pagina web
     :rtype: 
@@ -8,4 +8,5 @@ def ReadWebPageContent(urlToRead) -> str:
     :return: pagina (stringa)
     """
     f = ur.urlopen(urlToRead)
-    return str(f.read())
+    return  f.read()
+
